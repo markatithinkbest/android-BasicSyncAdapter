@@ -19,6 +19,8 @@ package com.example.android.basicsyncadapter.net;
 import android.text.format.Time;
 import android.util.Xml;
 
+import com.example.android.common.logger.Log;
+
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -160,6 +162,7 @@ public class FeedParser {
                 skip(parser);
             }
         }
+        Log.d("MEMBERS","checking original methods --- id="+id+" title="+title);
         return new Entry(id, title, link, publishedOn);
     }
 
